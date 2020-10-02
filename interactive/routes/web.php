@@ -17,6 +17,12 @@ Route::get('/', function () {
     return view('home');
 });
 
+//Strategy guides
+// Route::get('/strategy', 'StrategyController@index');
+// Route::get('/strategy/create', 'StrategyController@create');
+// Route::post('/strategy/store', 'StrategyController@store');
+Route::resouce('strategy', 'StrategyController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
