@@ -13,7 +13,8 @@ class StrategyController extends Controller
      */
     public function index()
     {
-        //
+        $strategies = Strategy::all();
+        return view('strategy.index')->with('strategies', $strategies);
     }
 
     /**
@@ -23,7 +24,7 @@ class StrategyController extends Controller
      */
     public function create()
     {
-        //
+        return view('strategy.create');
     }
 
     /**
@@ -34,7 +35,11 @@ class StrategyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $strategy = new Strategy;
+        $strategy = $request->input('title');
+        $strategy = $request->input('body');
+        $strategy->save();
+        return redirect('/strategy');
     }
 
     /**

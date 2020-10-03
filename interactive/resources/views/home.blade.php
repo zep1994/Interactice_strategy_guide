@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <a href="/strategy/create">Hello</a>
                 </div>
             </div>
         </div>

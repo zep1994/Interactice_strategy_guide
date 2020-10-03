@@ -21,7 +21,7 @@ Route::get('/', function () {
 // Route::get('/strategy', 'StrategyController@index');
 // Route::get('/strategy/create', 'StrategyController@create');
 // Route::post('/strategy/store', 'StrategyController@store');
-Route::resouce('strategy', 'StrategyController');
+Route::resource('strategy', 'StrategyController');
 
 Auth::routes();
 
